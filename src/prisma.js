@@ -5,9 +5,16 @@ const prisma = new Prisma({
   endpoint: "http://localhost:4466"
 });
 
-// prisma.query.users(null, "{ id name email posts { id title }}").then(data => {
-//   console.log(JSON.stringify(data, undefined, 2));
-// });
+export { prisma as default };
+
+// prisma.query
+//   .users(null, "{ id name email posts { id title }}")
+//   .then(data => {
+//     console.log(JSON.stringify(data, undefined, 2));
+//   })
+//   .catch(err => {
+//     console.log(err);
+//   });
 
 // prisma.query
 //   .comments(null, "{ id text author { id name email } post {id title }}")
